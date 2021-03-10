@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section :class="'demo-page'">
     <h1>Demo</h1>
     <ul>
       <li v-for="(item, index) in todoList" :key="index">
@@ -44,6 +44,6 @@ export default class XXX extends Vue {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 
 </style>
