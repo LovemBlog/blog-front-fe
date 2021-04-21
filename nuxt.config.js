@@ -1,3 +1,4 @@
+const isProd = process.env.NODE_ENV === 'production'
 export default {
   server: {
     port: 3005,
@@ -5,6 +6,9 @@ export default {
     timing: {
       total: true
     }
+  },
+  env: {
+    STATIC_URL: isProd ? `https://${process.env.STATIC_URL}` : '',
   },
   
   // Global page headers (https://go.nuxtjs.dev/config-head)
@@ -67,5 +71,10 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     transpile: [/^element-ui/],
+    extend(config) {
+      if (isProd && process.env.STATIC_URL) {
+        config.output.publicPath = `https://${process.env.STATIC_URL}/`
+      }
+    }
   }
 }
