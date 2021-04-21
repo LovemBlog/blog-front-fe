@@ -18,3 +18,9 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+
+## 记录
+`Cannot find module '@nuxt/ufo'`
+全局安装 nuxt 
+项目里安装 @nuxt/ufo

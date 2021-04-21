@@ -3,34 +3,25 @@
     <div>
       <Logo />
       <h1 class="title">
-        nuxt-test
+        {{ name }}
       </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { getTestApi } from '@/api'
+import axios from 'axios'
 
-export default Vue.extend({})
+export default Vue.extend({
+  // async asyncData ({ $axios }) {
+  //   // called every time before loading the component
+  //   const test = await $axios.$get('http://127.0.0.1:3006/test?hash=123')
+  //   console.log('test', test)
+  //   return { name: 'World' }
+  // },
+})
 </script>
 
 <style>

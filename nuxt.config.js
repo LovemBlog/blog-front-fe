@@ -1,4 +1,12 @@
 export default {
+  server: {
+    port: 3005,
+    host: '0.0.0.0',
+    timing: {
+      total: true
+    }
+  },
+  
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'nuxt-test',
@@ -34,7 +42,23 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [],
+  modules: ['@nuxtjs/axios'],
+
+  axios: {
+    proxy: true, // 表示开启代理
+    prefix: '/api', // 表示给请求url加个前缀 /api
+    credentials: true // 表示跨域请求时是否需要使用凭证
+  },
+
+  proxy: {
+    '/api': { 
+      target: 'http://127.0.0.1:3006', // 目标接口域名
+      pathRewrite: {
+        '^/api': '/', // 把 /api 替换成 /
+        changeOrigin: true // 表示是否跨域
+      }    
+    }
+  },
 
   styleResources: {
     scss: ['./assets/styles/*.global.scss']

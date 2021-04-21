@@ -1,13 +1,13 @@
 <!--
  * @Date: 2021-03-11 02:01:00
  * @Author: Leo
- * @LastEditors: Leo
- * @LastEditTime: 2021-03-11 02:01:52
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-04-01 11:33:32
  * @Description: Do not edit
  * @FilePath: \toolkitg:\workspace-self\blog-front-fe\pages\about.vue
 -->
 <template>
-  <section>about</section>
+  <section>关于</section>
 </template>
 
 <script lang="ts">

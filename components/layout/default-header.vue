@@ -1,8 +1,8 @@
 <!--
  * @Date: 2021-03-11 01:04:07
  * @Author: Leo
- * @LastEditors: Leo
- * @LastEditTime: 2021-03-11 02:11:15
+ * @LastEditors: goodlcw1
+ * @LastEditTime: 2021-04-21 14:31:00
  * @Description: Do not edit
  * @FilePath: \toolkitg:\workspace-self\blog-front-fe\layouts\header.vue
 -->
@@ -10,7 +10,6 @@
   <header class="header">
     <div class="content header-cont">
       <div class="logo-box">
-        <!-- <img src="/static/images/logo.png" alt="" class="logo"> -->
         <div class="logo-text">进击的学霸的博客</div>
       </div>
       <nav class="nav-list">
